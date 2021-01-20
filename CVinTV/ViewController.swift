@@ -12,7 +12,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let num = ["Popular Electronics", "Popular Brands", "Electronic Suggestions", "4", "5", "6", "7"]
 
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var banner: UIView!
+    
         override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -23,7 +24,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "tvCell")
             tableView.register(UINib(nibName: "TableViewCellTwo",bundle: nil), forCellReuseIdentifier: "tvCell2")
             
-
+            self.cornerRadiusView(radius: banner)
+    }
+    
+    func cornerRadiusView(radius: UIView ){
+        radius.layer.cornerRadius = 10.0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
