@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tvCell2" rowHeight="200" id="nuy-c6-XIR" customClass="TableViewCellTwo" customModule="CVinTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="353" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nuy-c6-XIR" id="NpU-B7-mus">
+                <rect key="frame" x="0.0" y="0.0" width="353" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdZ-Ka-E95">
+                        <rect key="frame" x="0.0" y="0.0" width="353" height="200"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5v9-x7-Kpf">
+                                <rect key="frame" x="0.0" y="0.0" width="353" height="210"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="k6C-P3-yoj">
+                                    <size key="itemSize" width="176" height="240"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <connections>
+                                    <outlet property="dataSource" destination="nuy-c6-XIR" id="KSc-gY-p2i"/>
+                                    <outlet property="delegate" destination="nuy-c6-XIR" id="fSi-zH-nIm"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5v9-x7-Kpf" firstAttribute="top" secondItem="cdZ-Ka-E95" secondAttribute="top" id="BPy-co-74P"/>
+                            <constraint firstAttribute="height" constant="200" id="I3R-tz-sLB"/>
+                            <constraint firstAttribute="width" constant="353" id="Q1a-Wc-Cwn"/>
+                            <constraint firstAttribute="trailing" secondItem="5v9-x7-Kpf" secondAttribute="trailing" id="fdC-Kn-9C5"/>
+                            <constraint firstAttribute="bottom" secondItem="5v9-x7-Kpf" secondAttribute="bottom" constant="-10" id="kyF-7s-SEv"/>
+                            <constraint firstItem="5v9-x7-Kpf" firstAttribute="leading" secondItem="cdZ-Ka-E95" secondAttribute="leading" id="nJ5-PK-gTH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cdZ-Ka-E95" firstAttribute="leading" secondItem="NpU-B7-mus" secondAttribute="leading" id="8UD-yV-X66"/>
+                    <constraint firstAttribute="trailing" secondItem="cdZ-Ka-E95" secondAttribute="trailing" id="X1a-1J-3Ls"/>
+                    <constraint firstAttribute="bottom" secondItem="cdZ-Ka-E95" secondAttribute="bottom" id="cTh-Fs-rhT"/>
+                    <constraint firstItem="cdZ-Ka-E95" firstAttribute="top" secondItem="NpU-B7-mus" secondAttribute="top" id="w06-1A-ABb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="5v9-x7-Kpf" id="2fx-az-Mfs"/>
+            </connections>
+            <point key="canvasLocation" x="-186.23188405797103" y="-10.044642857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

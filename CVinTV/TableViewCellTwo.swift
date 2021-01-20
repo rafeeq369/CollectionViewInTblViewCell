@@ -1,50 +1,40 @@
 //
-//  TableViewCell.swift
+//  TableViewCellTwo.swift
 //  CVinTV
 //
-//  Created by Soft on 29/10/1942 Saka.
+//  Created by intelmac on 19/01/21.
 //
 
 import UIKit
 
-class TableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class TableViewCellTwo: UITableViewCell,UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
-    let nums = ["1 One", "2 Tow", "3 Three", "4 Four", "5 Five", "6 Six"]
-    let counter = ["One", "Tow", "Three", "Four", "Five", "Six"]
     @IBOutlet weak var collectionView: UICollectionView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.reloadData()
-        
-        collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CVCell")
+        collectionView.register(UINib(nibName: "BrandCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BrandCVCell")
 
-        
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+        // Configure the view for the selected state
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return nums.count
+            return 6
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CVCell", for: indexPath) as! CollectionViewCell
-        return cell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BrandCVCell", for: indexPath) as! BrandCollectionViewCell
+            return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300, height: 135)
+            return CGSize(width: 180, height: 203)
     }
-
 }
-
