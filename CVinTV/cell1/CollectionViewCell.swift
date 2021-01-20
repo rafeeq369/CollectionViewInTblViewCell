@@ -12,6 +12,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ViewRadius: UIView!
     @IBOutlet weak var imgRadius: UIImageView!
     @IBOutlet weak var userImgs: UIImageView!
+    @IBOutlet weak var productImg: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -16,7 +16,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     let num = ["Popular Electronics", "Popular Brands", "Popular Brands", "Popular Gadgets", "Popular Gadgets", "6","Electronic Suggestions", "4", "5", "6"]
     let topBrands = ["Appple", "Samsung", "One Plus", "Redmi", "Nokia"]
-
+    let imgs = [#imageLiteral(resourceName: "ipad21"), #imageLiteral(resourceName: "ipad4"), #imageLiteral(resourceName: "i1"), #imageLiteral(resourceName: "ipad3"), #imageLiteral(resourceName: "ipad21"), #imageLiteral(resourceName: "ipad4")]
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var banner: UIView!
     @IBOutlet weak var searchFeild: UITextField!

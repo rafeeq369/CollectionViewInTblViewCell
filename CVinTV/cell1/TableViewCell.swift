@@ -13,7 +13,8 @@ class TableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionView
 
     let nums = ["1 One", "2 Tow", "3 Three", "4 Four", "5 Five", "6 Six"]
     let counter = ["One", "Tow", "Three", "Four", "Five", "Six"]
-    let imgs = [#imageLiteral(resourceName: "i1"), #imageLiteral(resourceName: "ipad4"), #imageLiteral(resourceName: "i1"), #imageLiteral(resourceName: "ipad3"), #imageLiteral(resourceName: "ipad21"), #imageLiteral(resourceName: "ipad4")]
+    let ProductImgs = [#imageLiteral(resourceName: "ipad21"), #imageLiteral(resourceName: "ipad4"), #imageLiteral(resourceName: "i1"), #imageLiteral(resourceName: "ipad3"), #imageLiteral(resourceName: "ipad21"), #imageLiteral(resourceName: "ipad4")]
+    let UserImgs = [#imageLiteral(resourceName: "8"), #imageLiteral(resourceName: "5"), #imageLiteral(resourceName: "7"), #imageLiteral(resourceName: "4"), #imageLiteral(resourceName: "1"), #imageLiteral(resourceName: "9")]
     @IBOutlet weak var collectionView: UICollectionView!
     var delegate: tblDelegate!
     
@@ -43,22 +44,19 @@ class TableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CVCell", for: indexPath) as! CollectionViewCell
+        cell.productImg?.image = ProductImgs[indexPath.row]
+        cell.userImgs?.image = UserImgs[indexPath.row]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300, height: 145)
+        return CGSize(width: 330, height: 150)
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Navigation"), object: nil, userInfo: nil)
-
         //self.delegate.goToNav()
-
-        
-        
     }
-
 }
 

@@ -16,12 +16,14 @@ class AnotherViewController: UIViewController {
     @IBOutlet weak var fstView: UIView!
     @IBOutlet weak var scndView: UIView!
     @IBOutlet weak var yrdView: UIView!
+    @IBOutlet weak var userImg: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         scrlView.layer.cornerRadius = 20
         btn.layer.cornerRadius = 28
         backBtn.layer.cornerRadius = 5
+        userImg.layer.cornerRadius = 5
         self.shadow(shadow: fstView)
         self.shadow(shadow: scndView)
         self.shadow(shadow: yrdView)
