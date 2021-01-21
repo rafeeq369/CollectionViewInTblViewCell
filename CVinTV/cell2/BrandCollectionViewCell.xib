@@ -57,8 +57,9 @@
             </constraints>
             <size key="customSize" width="150" height="164"/>
             <connections>
+                <outlet property="Lbel" destination="atZ-J7-el8" id="f1v-0s-9ae"/>
                 <outlet property="brandCellView" destination="Rnc-k8-8TM" id="mPw-NK-5mN"/>
-                <outlet property="innerView" destination="p7k-Ti-fZ7" id="aEe-UB-NpA"/>
+                <outlet property="innerView" destination="p7k-Ti-fZ7" id="2Oq-cT-nhm"/>
             </connections>
             <point key="canvasLocation" x="747.82608695652175" y="193.19196428571428"/>
         </collectionViewCell>

@@ -11,7 +11,8 @@ class BrandCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var brandCellView: UIView!
     @IBOutlet weak var innerView: UIView!
-    
+    @IBOutlet weak var Lbel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -146,7 +146,7 @@
             <size key="customSize" width="356" height="157"/>
             <connections>
                 <outlet property="ViewRadius" destination="CNK-r7-W5Y" id="65U-7D-x1J"/>
-                <outlet property="imgRadius" destination="fkM-8I-BjK" id="ZQv-BW-mHT"/>
+                <outlet property="imgRadius" destination="fkM-8I-BjK" id="Y7Z-o8-TwC"/>
                 <outlet property="userImgs" destination="FXw-oT-bwX" id="SqC-rG-u0L"/>
             </connections>
             <point key="canvasLocation" x="-70" y="-38"/>
