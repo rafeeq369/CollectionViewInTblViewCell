@@ -17,7 +17,7 @@ class AnotherViewController: UIViewController {
     @IBOutlet weak var scndView: UIView!
     @IBOutlet weak var yrdView: UIView!
     @IBOutlet weak var userImg: UIImageView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         scrlView.layer.cornerRadius = 20

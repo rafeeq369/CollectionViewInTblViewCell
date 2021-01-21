@@ -9,6 +9,7 @@ import UIKit
 protocol tblDelegate {
     func goToNav()
 }
+
 class TableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     let nums = ["1 One", "2 Tow", "3 Three", "4 Four", "5 Five", "6 Six"]
@@ -54,9 +55,10 @@ class TableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionView
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Navigation"), object: nil, userInfo: nil)
-        //self.delegate.goToNav()
+       
+        
+        let product = ProductImgs[indexPath.row]
+//        self.delegate.goToNav()
     }
 }
 

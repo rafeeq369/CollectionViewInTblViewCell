@@ -17,11 +17,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let num = ["Popular Electronics", "Popular Brands", "Popular Brands", "Popular Gadgets", "Popular Gadgets", "6","Electronic Suggestions", "4", "5", "6"]
     let topBrands = ["Appple", "Samsung", "One Plus", "Redmi", "Nokia"]
     let imgs = [#imageLiteral(resourceName: "ipad21"), #imageLiteral(resourceName: "ipad4"), #imageLiteral(resourceName: "i1"), #imageLiteral(resourceName: "ipad3"), #imageLiteral(resourceName: "ipad21"), #imageLiteral(resourceName: "ipad4")]
-    
+    let ProductImgs = [#imageLiteral(resourceName: "ipad21"), #imageLiteral(resourceName: "ipad4"), #imageLiteral(resourceName: "i1"), #imageLiteral(resourceName: "ipad3"), #imageLiteral(resourceName: "ipad21"), #imageLiteral(resourceName: "ipad4")]
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var banner: UIView!
     @IBOutlet weak var searchFeild: UITextField!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
             
@@ -37,17 +37,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.cornerRadiusView(radius: banner)
 
         heightConstraint.constant = 135 + 203 * 7.7
-        NotificationCenter.default.addObserver(self, selector: #selector(myFunction), name: NSNotification.Name(rawValue: "Navigation"), object: nil)
-    }
-    
-    @objc func myFunction(notification: Notification) {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-
-        let destination = storyboard.instantiateViewController(withIdentifier: "AnotherViewController") as! AnotherViewController
-        self.navigationController?.pushViewController(destination, animated: true)
+        
+//       NotificationCenter.default.addObserver(self, selector: #selector(myFunction), name: NSNotification.Name(rawValue: "Navigation"), object: nil)
     }
     
 //    .................................
+//
+//    @objc func myFunction(notification: Notification) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//
+//        let destination = storyboard.instantiateViewController(withIdentifier: "AnotherViewController") as! AnotherViewController
+//        self.navigationController?.pushViewController(destination, animated: true)
+//    }
+    
+//    ................................. Collection View .................................   \\
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return topBrands.count
@@ -59,25 +62,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return cellTop
     }
     
+//    .................................
     
     internal func textFieldShouldReturn(_ searchFeild: UITextField) -> Bool {
             self.searchFeild.endEditing(true)
             return false
     }
     
-
-//    .................................
-    
     func cornerRadiusView(radius: UIView ){
         radius.layer.cornerRadius = 10.0
     }
+
+//    .................................
+    
+
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return  5
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return 1
     }
     
@@ -110,12 +114,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
                 return 60 // my custom height
         }
-    func goToNav()
+    
+//    .......................................
+    
+     func goToNav()
     {
-                let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
-                let destination = storyboard.instantiateViewController(withIdentifier: "AnotherViewController") as! AnotherViewController
-                self.navigationController?.pushViewController(destination, animated: true)
+//        let product = ProductImgs[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AnotherViewController") as! AnotherViewController
+            self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
