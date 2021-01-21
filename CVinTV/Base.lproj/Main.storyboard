@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="62" width="320" height="506"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8j-dm-6RS" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1592"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1605"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="va2-Hn-Kq8">
                                                 <rect key="frame" x="0.0" y="-53" width="320" height="397"/>
@@ -174,10 +174,10 @@
                                                 </constraints>
                                             </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="30" maximumZoomScale="30" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nDd-Si-w1A">
-                                                <rect key="frame" x="0.0" y="344" width="320" height="1235"/>
+                                                <rect key="frame" x="0.0" y="344" width="320" height="1261"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="1235" id="Vgk-Zs-Dbs"/>
+                                                    <constraint firstAttribute="height" constant="1254" id="Vgk-Zs-Dbs"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dataSource" destination="1cc-Ut-e0A" id="QtQ-d3-sAO"/>
@@ -193,7 +193,7 @@
                                             <constraint firstAttribute="trailing" secondItem="va2-Hn-Kq8" secondAttribute="trailing" id="J9X-65-eTa"/>
                                             <constraint firstItem="va2-Hn-Kq8" firstAttribute="top" secondItem="D8j-dm-6RS" secondAttribute="top" constant="-53" id="MvN-1D-Vhn"/>
                                             <constraint firstAttribute="trailing" secondItem="nDd-Si-w1A" secondAttribute="trailing" id="hFe-B6-UkD"/>
-                                            <constraint firstAttribute="bottom" secondItem="nDd-Si-w1A" secondAttribute="bottom" id="jcy-bT-xhP"/>
+                                            <constraint firstAttribute="bottom" secondItem="nDd-Si-w1A" secondAttribute="bottom" constant="-6" id="jcy-bT-xhP"/>
                                             <constraint firstItem="nDd-Si-w1A" firstAttribute="top" secondItem="va2-Hn-Kq8" secondAttribute="bottom" id="x2r-pE-XOs"/>
                                         </constraints>
                                     </view>
@@ -240,11 +240,20 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CdK-3g-WDA">
+                                <rect key="frame" x="10" y="467" width="300" height="94"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="OEC-s3-60Q"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zFY-5I-ZqZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zFY-5I-ZqZ" firstAttribute="trailing" secondItem="V5b-dW-UsU" secondAttribute="trailing" constant="16" id="Bxb-d6-UyZ"/>
+                            <constraint firstItem="zFY-5I-ZqZ" firstAttribute="bottom" secondItem="CdK-3g-WDA" secondAttribute="bottom" constant="7" id="CO0-oz-NOh"/>
+                            <constraint firstItem="zFY-5I-ZqZ" firstAttribute="trailing" secondItem="CdK-3g-WDA" secondAttribute="trailing" constant="10" id="CgM-9n-8co"/>
                             <constraint firstItem="luD-dp-M4X" firstAttribute="trailing" secondItem="zFY-5I-ZqZ" secondAttribute="trailing" id="Fwd-6x-xaO"/>
                             <constraint firstItem="V5b-dW-UsU" firstAttribute="top" secondItem="zFY-5I-ZqZ" secondAttribute="top" constant="26" id="Pbt-o1-J7R"/>
                             <constraint firstItem="luD-dp-M4X" firstAttribute="top" secondItem="V5b-dW-UsU" secondAttribute="bottom" constant="3.5" id="QCJ-eQ-8Vh"/>
@@ -252,6 +261,7 @@
                             <constraint firstItem="D8j-dm-6RS" firstAttribute="width" secondItem="XcZ-1r-0Z6" secondAttribute="width" id="XT8-DT-Uz5"/>
                             <constraint firstAttribute="bottom" secondItem="luD-dp-M4X" secondAttribute="bottom" id="cWh-zS-fEE"/>
                             <constraint firstItem="luD-dp-M4X" firstAttribute="top" secondItem="zFY-5I-ZqZ" secondAttribute="top" constant="62" id="k3Z-uv-UOH"/>
+                            <constraint firstItem="CdK-3g-WDA" firstAttribute="leading" secondItem="zFY-5I-ZqZ" secondAttribute="leading" constant="10" id="kep-mI-b2m"/>
                             <constraint firstItem="luD-dp-M4X" firstAttribute="leading" secondItem="zFY-5I-ZqZ" secondAttribute="leading" id="v21-lt-Ms4"/>
                         </constraints>
                     </view>
@@ -797,6 +807,9 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
