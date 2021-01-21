@@ -58,7 +58,7 @@ class TableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionView
        
         
         let product = ProductImgs[indexPath.row]
-//        self.delegate.goToNav()
+        self.delegate.goToNav()
     }
 }
 
