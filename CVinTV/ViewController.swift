@@ -36,7 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.cornerRadiusView(radius: banner)
 
-        heightConstraint.constant = 135 + 203 * 7.7
+        heightConstraint.constant = 135 + 203 * 7.75
         
 //       NotificationCenter.default.addObserver(self, selector: #selector(myFunction), name: NSNotification.Name(rawValue: "Navigation"), object: nil)
     }
